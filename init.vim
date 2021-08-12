@@ -23,3 +23,5 @@ source ~/.config/nvim/settings/colors.vim
 source ~/.config/nvim/settings/fzf.vim
 source ~/.config/nvim/settings/leader-mappings.vim
 source ~/.config/nvim/settings/indentguide.vim
+source ~/.config/nvim/settings/ultisnips.vim
+
