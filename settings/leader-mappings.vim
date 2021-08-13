@@ -23,9 +23,9 @@ function SplitResizeTerminal()
   exe "resize 10"
 endfunction
 
-nnoremap <silent><Leader>tn :tabnew<CR>
+nnoremap <silent><Leader>tnt :tabnew<CR>
 nnoremap <silent><Leader>tt :call SplitResizeTerminal()<CR>
-nnoremap <silent><Leader>tq :tabclose<CR>
+nnoremap <silent><Leader>td :tabclose<CR>
 
 " Buffers mappings
 nnoremap <Leader><tab> :b#<CR>
