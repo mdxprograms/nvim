@@ -32,11 +32,11 @@ nnoremap <Leader><tab> :b#<CR>
 nnoremap <Leader>bd :bd!<CR>
 
 " Fugitive
-nmap <Leader>gp :Gpush origin<space>
+nmap <Leader>gp :Git push origin<space>
 nmap <Leader>gl :Gpull origin<space>
 nmap <Leader>gco :Git checkout<space>
 nmap <Leader>gcm :Git checkout master<CR>
-nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gs :Git<CR>
 
 " Merginal
 nmap <Leader>gm :MerginalToggle<CR>
