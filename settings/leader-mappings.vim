@@ -32,9 +32,9 @@ nnoremap <silent><Leader>td :tabclose<CR>
 nnoremap <Leader><tab> :b#<CR>
 nnoremap <Leader>bd :bd!<CR>
 
-" Fugitive
+" Fugitive / Git
 nmap <Leader>gp :Git push origin<space>
-nmap <Leader>gl :Gpull origin<space>
+nmap <Leader>gl :Git pull origin<space>
 nmap <Leader>gco :Git checkout<space>
 nmap <Leader>gcm :Git checkout master<CR>
 nmap <Leader>gs :Git<CR>
