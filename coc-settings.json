@@ -9,5 +9,5 @@
     "json"
   ],
   "eslint.packageManager": "npm",
-  "prettier.eslintIntegration": true
+  "prettier.eslintIntegration": false
 }
