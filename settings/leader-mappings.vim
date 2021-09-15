@@ -21,7 +21,7 @@ nnoremap <Leader>rs :resize<space>
 "" terminal split bottom
 function SplitResizeTerminal()
   exe "split | terminal"
-  exe "resize 10"
+  exe "resize 8"
 endfunction
 
 nnoremap <silent><Leader>tnt :tabnew<CR>
