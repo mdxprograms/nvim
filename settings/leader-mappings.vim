@@ -24,7 +24,12 @@ function SplitResizeTerminal()
   exe "resize 8"
 endfunction
 
-nnoremap <silent><Leader>tnt :tabnew<CR>
+function NewTabTerminal()
+  exe "tabnew | terminal"
+endfunction
+
+nnoremap <silent><Leader>tn :tabnew<CR>
+nnoremap <silent><Leader>tnt :call NewTabTerminal()<CR>
 nnoremap <silent><Leader>tt :call SplitResizeTerminal()<CR>
 nnoremap <silent><Leader>td :tabclose<CR>
 
