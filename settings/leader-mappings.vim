@@ -11,8 +11,8 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 nnoremap <leader>u :UndotreeShow<CR>
-nnoremap <Leader>+ :vertical resize +5<CR>
-nnoremap <Leader>- :vertical resize -5<CR>
+nnoremap <Leader>+ :resize +5<CR>
+nnoremap <Leader>- :resize -5<CR>
 nnoremap <Leader>rp :resize 100<CR>
 nnoremap <Leader><Leader> :e ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>rs :resize<space>
