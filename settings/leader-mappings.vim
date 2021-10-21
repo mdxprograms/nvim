@@ -16,6 +16,7 @@ nnoremap <Leader>- :resize -5<CR>
 nnoremap <Leader>rp :resize 100<CR>
 nnoremap <Leader><Leader> :e ~/.config/nvim/init.vim<CR>
 nnoremap <Leader>rs :resize<space>
+nnoremap <Leader>ff /
 
 " Tabs
 "" terminal split bottom
