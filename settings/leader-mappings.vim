@@ -17,7 +17,7 @@ nnoremap <Leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <Leader>ff <cmd>Telescope find_files<cr>
 nnoremap <Leader>fb <cmd>Telescope buffers<cr>
 nnoremap <Leader>fs :w<CR>
-nnoremap <Leader>s /
+nnoremap <Leader>s <cmd>Telescope current_buffer_fuzzy_find<cr>
 
 " CoC mappings
 inoremap <silent><expr> <C-space> coc#refresh()
