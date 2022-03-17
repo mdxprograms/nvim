@@ -16,6 +16,7 @@ let g:coc_global_extensions = [
       \ 'coc-rls',
       \ 'coc-rust-analyzer',
       \ 'coc-snippets',
+      \ 'coc-svelte',
       \ 'coc-tailwindcss',
       \ 'coc-tsserver',
       \ 'coc-ultisnips',
