@@ -69,9 +69,12 @@ endif
 let g:NERDSpaceDelims = 1
 
 fun! TrimWhitespace()
-    let l:save = winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
+  if &ft =~ 'bash\|sh'
+    return
+  endif
+  let l:save = winsaveview()
+  keeppatterns %s/\s\+$//e
+  call winrestview(l:save)
 endfun
 
 " Remember last position
