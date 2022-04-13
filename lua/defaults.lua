@@ -93,7 +93,7 @@ g.UltiSnipsExpandTrigger = "<tab>"
 g.svelte_preprocessors = {"typescript"}
 
 -- coc_extensions
-vim.g.coc_global_extensions = {
+g.coc_global_extensions = {
   "coc-css",
   "coc-cssmodules",
   "coc-emmet",
