@@ -47,6 +47,7 @@ return require("packer").startup(
     use "vim-utils/vim-man"
     use {"evanleck/vim-svelte", branch = "main"}
     use {"dracula/vim", name = "vim-dracula", rev = "bfbc3cadbd142e74d3b92e63f1de8711261015a4", frozen = 1}
+    use { 'michaelb/sniprun', run = 'bash install.sh' }
     use {"neoclide/coc.nvim", branch = "release"}
     use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
 
