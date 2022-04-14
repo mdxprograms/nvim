@@ -9,5 +9,8 @@
 - fd
   - mac install `brew install fd`
   - arch install `sudo pacman -S fd`
-- minpac
-  - install -> `git clone https://github.com/k-takata/minpac.git ~/.config/nvim/pack/minpac/opt/minpac`
+- packer
+  ```bash
+  git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+   ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+  ```

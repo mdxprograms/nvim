@@ -6,7 +6,8 @@
     "typescript",
     "typescriptreact",
     "html",
-    "json"
+    "json",
+    "lua"
   ],
   "eslint.packageManager": "npm",
   "prettier.eslintIntegration": false,
