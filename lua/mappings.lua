@@ -26,6 +26,10 @@ H.nmap('<Leader>fb', '<cmd>Telescope buffers<cr>')
 H.nmap('<Leader>fs', ':w<CR>')
 H.nmap('<Leader>s', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
 
+-- scratchup (scratchpad doc)
+H.nmap('<Leader>op', ':lua require("scratchup").open_popup()<cr>')
+H.nmap('<Leader>cp', ':lua require("scratchup").close_popup()<cr>')
+
 -- " CoC mappings
 vim.cmd [[
 inoremap <silent><expr> <C-space> coc#refresh()

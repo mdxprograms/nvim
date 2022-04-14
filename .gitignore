@@ -1,3 +1,4 @@
 .netrwhist
 undodir
 plugin/packer_compiled.lua
+tmp/*.md

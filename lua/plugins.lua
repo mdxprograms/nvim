@@ -22,6 +22,7 @@ return require("packer").startup(
     use "airblade/vim-gitgutter"
     use "alaviss/nim.nvim"
     use "azadkuh/vim-cmus"
+    use 'editorconfig/editorconfig-vim'
     use "fatih/vim-go"
     use "honza/vim-snippets"
     use "jiangmiao/auto-pairs"
@@ -29,6 +30,7 @@ return require("packer").startup(
     use "mattn/emmet-vim"
     use "mbbill/undotree"
     use "mhinz/vim-startify"
+    use 'MunifTanjim/nui.nvim'
     use "nathanaelkane/vim-indent-guides"
     use "nvim-lua/plenary.nvim"
     use {"nvim-telescope/telescope.nvim", requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}}
