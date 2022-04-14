@@ -10,7 +10,6 @@
     "lua"
   ],
   "eslint.packageManager": "npm",
-  "prettier.eslintIntegration": false,
   "typescript.suggest.autoImports": true,
   "javascript.suggest.autoImports": true,
   "svelte.enable-ts-plugin": true

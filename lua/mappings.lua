@@ -1,28 +1,30 @@
+local H = require('helpers')
+
 vim.g.mapleader = " "
 
 -- " Map escape
-imap("jf", "<esc>")
+H.imap("jf", "<esc>")
 
 -- " Base mappings
-nmap('<leader>pw', ':Rg <C-R>=expand("<cword>")<CR><CR>')
-nmap('<leader>phw', ':h <C-R>=expand("<cword>")<CR><CR>')
-nmap('<leader>h', ':wincmd h<CR>')
-nmap('<leader>j', ':wincmd j<CR>')
-nmap('<leader>k', ':wincmd k<CR>')
-nmap('<leader>l', ':wincmd l<CR>')
-nmap('<leader>u', ':UndotreeShow<CR>')
-nmap('<Leader>+', ':resize +5<CR>')
-nmap('<Leader>-', ':resize -5<CR>')
-nmap('<Leader>rp', ':resize 100<CR>')
-nmap('<Leader><Leader>', ':e ~/.config/nvim/init.lua<CR>')
-nmap('<Leader>rs', ':resize<space>')
+H.nmap('<leader>pw', ':Rg <C-R>=expand("<cword>")<CR><CR>')
+H.nmap('<leader>phw', ':h <C-R>=expand("<cword>")<CR><CR>')
+H.nmap('<leader>h', ':wincmd h<CR>')
+H.nmap('<leader>j', ':wincmd j<CR>')
+H.nmap('<leader>k', ':wincmd k<CR>')
+H.nmap('<leader>l', ':wincmd l<CR>')
+H.nmap('<leader>u', ':UndotreeShow<CR>')
+H.nmap('<Leader>+', ':resize +5<CR>')
+H.nmap('<Leader>-', ':resize -5<CR>')
+H.nmap('<Leader>rp', ':resize 100<CR>')
+H.nmap('<Leader><Leader>', ':e ~/.config/nvim/init.lua<CR>')
+H.nmap('<Leader>rs', ':resize<space>')
 
 -- " File navigation mappings
-nmap('<Leader>fg', '<cmd>Telescope live_grep<cr>')
-nmap('<Leader>ff', '<cmd>Telescope find_files<cr>')
-nmap('<Leader>fb', '<cmd>Telescope buffers<cr>')
-nmap('<Leader>fs', ':w<CR>')
-nmap('<Leader>s', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
+H.nmap('<Leader>fg', '<cmd>Telescope live_grep<cr>')
+H.nmap('<Leader>ff', '<cmd>Telescope find_files<cr>')
+H.nmap('<Leader>fb', '<cmd>Telescope buffers<cr>')
+H.nmap('<Leader>fs', ':w<CR>')
+H.nmap('<Leader>s', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
 
 -- " CoC mappings
 vim.cmd [[
@@ -50,18 +52,18 @@ function SplitResizeTerminal()
 endfunction
 ]]
 
-nmap('<Leader>tn', ':tabnew<CR>')
-nmap('<Leader>tnt', ':tabnew | terminal<CR>')
-nmap('<Leader>tt', ':call SplitResizeTerminal()<CR>')
-nmap('<silent><Leader>td', ':tabclose<CR>')
+H.nmap('<Leader>tn', ':tabnew<CR>')
+H.nmap('<Leader>tnt', ':tabnew | terminal<CR>')
+H.nmap('<Leader>tt', ':call SplitResizeTerminal()<CR>')
+H.nmap('<silent><Leader>td', ':tabclose<CR>')
 
 -- " Buffers mappings
-nmap('<Leader><tab>', ':b#<CR>')
-nmap('<Leader>bd', ':bd!<CR>')
+H.nmap('<Leader><tab>', ':b#<CR>')
+H.nmap('<Leader>bd', ':bd!<CR>')
 
 -- " Fugitive / Git
-nmap('<Leader>gp', ':Git push origin<space>')
-nmap('<Leader>gl', ':Git pull origin<space>')
-nmap('<Leader>gco', ':Git checkout<space>')
-nmap('<Leader>gcm', ':Git checkout master<CR>')
-nmap('<Leader>gs', ':Git<CR>')
+H.nmap('<Leader>gp', ':Git push origin<space>')
+H.nmap('<Leader>gl', ':Git pull origin<space>')
+H.nmap('<Leader>gco', ':Git checkout<space>')
+H.nmap('<Leader>gcm', ':Git checkout master<CR>')
+H.nmap('<Leader>gs', ':Git<CR>')

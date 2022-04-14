@@ -1,6 +1,7 @@
 -- defaults
 local g = vim.g
 local HOME = os.getenv("HOME")
+local set_options = require('helpers').set_options
 
 vim.cmd("filetype plugin indent on")
 vim.cmd("syntax enable")
@@ -73,7 +74,7 @@ vim.cmd(
   silent! colorscheme dracula
   set background=dark
 ]]
-)
+  )
 
 -- rainbow brackets
 g.rainbow_active = true

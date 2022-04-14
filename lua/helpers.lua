@@ -1,20 +1,22 @@
-function map(mode, shortcut, command)
+local H = {}
+
+function H.map(mode, shortcut, command)
   vim.api.nvim_set_keymap(mode, shortcut, command, {noremap = true, silent = true})
 end
 
-function nmap(shortcut, command)
-  map('n', shortcut, command)
+function H.nmap(shortcut, command)
+  H.map('n', shortcut, command)
 end
 
-function imap(shortcut, command)
-  map('i', shortcut, command)
+function H.imap(shortcut, command)
+  H.map('i', shortcut, command)
 end
 
-function set_keymap(mode, from, to, opts)
+function H.set_keymap(mode, from, to, opts)
   vim.api.nvim_set_keymap(mode, from, to, opts)
 end
 
-function set_options(options)
+function H.set_options(options)
   for key, val in pairs(options) do
     if val == true then
       vim.api.nvim_command("set " .. key)
@@ -25,3 +27,5 @@ function set_options(options)
     end
   end
 end
+
+return H
