@@ -1,6 +1,5 @@
 local Popup = require("nui.popup")
 local event = require("nui.utils.autocmd").event
-local open = io.open
 local HOME = os.getenv("HOME")
 
 local Sup = {}
@@ -17,12 +16,12 @@ Sup.popup = Popup({
             style = "rounded",
         },
         position = {
-            row = "80%",
+            row = "40%",
             col = "50%"
         },
         size = {
             width = "80%",
-            height = "30%",
+            height = "60%",
         },
         buf_options = {
             modifiable = true,
@@ -34,38 +33,25 @@ Sup.popup = Popup({
         }
     })
 
-local function open_file()
-    local file = open(scratch_file_path, 'rb')
-    if not file then return nil end
 
-    local lines = {}
-
-    for line in io.lines(scratch_file_path) do
-        table.insert(lines, line)
-    end
-
-    file:close()
-    return lines
-end
-
-function Sup.open_popup()
+Sup.open_popup = function()
     -- mount/open the component
+    -- local content = open_file()
     Sup.popup:mount()
-    local content = open_file()
 
     -- unmount component when cursor leaves buffer
     Sup.popup:on(event.BufLeave, function()
         vim.cmd('w ' .. scratch_file_path)
-        Sup.popup:unmount()
     end)
 
     -- set content
-    vim.api.nvim_buf_set_lines(Sup.popup.bufnr, 0, 1, false, content)
+    vim.cmd('silent edit' .. scratch_file_path)
     vim.bo.filetype = 'markdown'
 end
 
-function Sup.close_popup()
-    vim.cmd('q')
+Sup.close_popup = function()
+    vim.cmd('silent w ' .. scratch_file_path)
+    Sup.popup:unmount()
 end
 
 return Sup
