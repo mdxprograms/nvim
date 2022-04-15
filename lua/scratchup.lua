@@ -16,15 +16,22 @@ Sup.popup = Popup({
             },
             style = "rounded",
         },
-        position = "50%",
+        position = {
+            row = "80%",
+            col = "50%"
+        },
         size = {
             width = "80%",
-            height = "60%",
+            height = "30%",
         },
         buf_options = {
             modifiable = true,
             readonly = false,
         },
+        win_options = {
+            winblend = 10,
+            winhighlight = "Normal:Normal,FloatBorder:SpecialChar",
+        }
     })
 
 local function open_file()
