@@ -35,16 +35,12 @@ Sup.popup = Popup({
 
 
 Sup.open_popup = function()
-    -- mount/open the component
-    -- local content = open_file()
     Sup.popup:mount()
 
-    -- unmount component when cursor leaves buffer
     Sup.popup:on(event.BufLeave, function()
         vim.cmd('w ' .. scratch_file_path)
     end)
 
-    -- set content
     vim.cmd('silent edit' .. scratch_file_path)
     vim.bo.filetype = 'markdown'
 end
