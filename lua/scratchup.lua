@@ -38,7 +38,7 @@ Sup.open_popup = function()
     Sup.popup:mount()
 
     Sup.popup:on(event.BufLeave, function()
-        vim.cmd('w ' .. scratch_file_path)
+        vim.cmd('silent w ' .. scratch_file_path)
     end)
 
     vim.cmd('silent edit' .. scratch_file_path)
