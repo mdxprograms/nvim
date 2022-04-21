@@ -41,7 +41,7 @@ Sup.open_popup = function()
         vim.cmd('silent w ' .. scratch_file_path)
     end)
 
-    vim.cmd('silent edit' .. scratch_file_path)
+    vim.cmd('silent edit ' .. scratch_file_path)
     vim.bo.filetype = 'markdown'
 end
 
