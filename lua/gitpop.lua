@@ -5,10 +5,11 @@ local helpers = require("helpers")
 local api = vim.api
 
 local GitPop = {}
-local buf_title = 'Git Pop'
+local buf_title = 'GitPop'
 
 local mappings = {
-    ['<cr>'] = 'open_file()'
+    ['<cr>'] = 'open_file()',
+    ['q'] = 'close_popup()'
 }
 
 for k,v in pairs(mappings) do
@@ -53,6 +54,10 @@ GitPop.open_popup = function()
     GitPop.popup:on(event.BufLeave, function()
         GitPop.popup:unmount()
     end)
+end
+
+GitPop.close_popup = function()
+    api.nvim_buf_delete(0, {})
 end
 
 GitPop.open_file = function ()
