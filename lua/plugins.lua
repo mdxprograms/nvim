@@ -43,7 +43,6 @@ return require("packer").startup(
         use "sheerun/vim-polyglot"
         use "stephenway/postcss.vim"
         use "tpope/vim-dispatch"
-        use "tpope/vim-fugitive"
         use "tpope/vim-surround"
         use "vim-airline/vim-airline"
         use "vim-utils/vim-man"
@@ -51,7 +50,7 @@ return require("packer").startup(
         use {"dracula/vim", name = "vim-dracula", rev = "bfbc3cadbd142e74d3b92e63f1de8711261015a4", frozen = 1}
         use {"neoclide/coc.nvim", branch = "release"}
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
-
+        use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
         if packer_bootstrap then
             require("packer").sync()
         end

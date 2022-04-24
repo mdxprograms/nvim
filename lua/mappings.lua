@@ -66,8 +66,4 @@ H.nmap('<Leader><tab>', ':b#<CR>')
 H.nmap('<Leader>bd', ':bd!<CR>')
 
 -- " Fugitive / Git
-H.nmap('<Leader>gp', ':Git push origin<space>')
-H.nmap('<Leader>gl', ':Git pull origin<space>')
-H.nmap('<Leader>gco', ':Git checkout<space>')
-H.nmap('<Leader>gcm', '<cmd>Git checkout main<CR>')
-H.nmap('<Leader>gs', ':Git<CR>')
+H.nmap('<Leader>gs', ':Neogit<CR>')
