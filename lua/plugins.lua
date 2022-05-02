@@ -29,7 +29,6 @@ return require("packer").startup(
         use "luochen1990/rainbow"
         use "mattn/emmet-vim"
         use "mbbill/undotree"
-        use "mhinz/vim-startify"
         use 'MunifTanjim/nui.nvim'
         use "nathanaelkane/vim-indent-guides"
         use "nvim-lua/plenary.nvim"
@@ -51,6 +50,13 @@ return require("packer").startup(
         use {"neoclide/coc.nvim", branch = "release"}
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
         use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+        use {
+            'goolord/alpha-nvim',
+            requires = { 'kyazdani42/nvim-web-devicons' },
+            config = function ()
+                require'alpha_nvim_config'.setup()
+            end
+        }
         if packer_bootstrap then
             require("packer").sync()
         end

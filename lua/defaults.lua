@@ -147,3 +147,8 @@ vim.cmd [[
     au BufNewFile,BufRead *.gohtml set syntax=gohtmltmpl
   endif
 ]]
+
+-- ignore indentline on alpha startup
+vim.cmd [[
+let g:indent_guides_exclude_filetypes = ['alpha']
+]]
