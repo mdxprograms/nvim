@@ -2,10 +2,10 @@ local H = require('helpers')
 
 vim.g.mapleader = " "
 
--- " Map escape
+-- Map escape
 H.imap("jf", "<esc>")
 
--- " Base mappings
+-- Base mappings
 H.nmap('<leader>pw', ':Rg <C-R>=expand("<cword>")<CR><CR>')
 H.nmap('<leader>phw', ':h <C-R>=expand("<cword>")<CR><CR>')
 H.nmap('<leader>h', ':wincmd h<CR>')
@@ -19,14 +19,14 @@ H.nmap('<Leader>rp', ':resize 100<CR>')
 H.nmap('<Leader><Leader>', ':e ~/.config/nvim/init.lua<CR>')
 H.nmap('<Leader>rs', ':resize<space>')
 
--- " File navigation mappings
+-- File navigation mappings
 H.nmap('<Leader>fg', '<cmd>Telescope live_grep<cr>')
 H.nmap('<Leader>ff', '<cmd>Telescope find_files<cr>')
 H.nmap('<Leader>fb', '<cmd>Telescope buffers<cr>')
 H.nmap('<Leader>fs', ':w<CR>')
 H.nmap('<Leader>s', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
 
--- " CoC mappings
+-- CoC mappings
 vim.cmd [[
 inoremap <silent><expr> <C-space> coc#refresh()
 nmap <silent> <leader>gd :call CocAction("jumpDefinition", "split")<CR>
@@ -44,7 +44,7 @@ nnoremap <Leader>pl :CocList project<CR>
 nnoremap <leader>e :CocCommand explorer<CR>
 ]]
 
--- " Tabs
+-- Tabs
 vim.cmd [[
 function SplitResizeTerminal()
   exe "split | terminal"
@@ -57,9 +57,13 @@ H.nmap('<Leader>tnt', ':tabnew | terminal<CR>')
 H.nmap('<Leader>tt', ':call SplitResizeTerminal()<CR>')
 H.nmap('<silent><Leader>td', ':tabclose<CR>')
 
--- " Buffers mappings
+-- Buffers mappings
 H.nmap('<Leader><tab>', ':b#<CR>')
 H.nmap('<Leader>bd', ':bd!<CR>')
 
--- " Fugitive / Git
+-- Fugitive / Git
 H.nmap('<Leader>gs', ':Neogit<CR>')
+
+-- Scratchup
+H.nmap('<Leader>op', ':lua require("scratchup").open_popup()<cr>')
+H.nmap('<Leader>cp', ':lua require("scratchup").close_popup()<cr>')

@@ -1,7 +1,6 @@
 local Popup = require("nui.popup")
 local event = require("nui.utils.autocmd").event
 local HOME = os.getenv("HOME")
-local helpers = require("helpers")
 
 local Sup = {}
 local scratch_file_path = HOME .. '/.config/nvim/tmp/scratchpad.md'
@@ -44,17 +43,16 @@ Sup.open_popup = function()
 
     vim.cmd('silent edit ' .. scratch_file_path)
     vim.bo.filetype = 'markdown'
+
+
+    Sup.popup:map("n", "q", function()
+        Sup.close_popup()
+    end, { noremap = true })
 end
 
 Sup.close_popup = function()
     vim.cmd('silent w ' .. scratch_file_path)
     Sup.popup:unmount()
 end
-
--- mappings
-helpers.nmap('<Leader>op', ':lua require("scratchup").open_popup()<cr>')
-helpers.nmap('<Leader>cp', ':lua require("scratchup").close_popup()<cr>')
-
-Sup.popup.on('open')
 
 return Sup
