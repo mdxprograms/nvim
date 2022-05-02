@@ -40,6 +40,12 @@ function M.setup()
         [[⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠳⡶⢦⠞⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄]],
         [[⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠳⠞⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄⠄]],
     }
+    dashboard.section.buttons.val = {
+        dashboard.button("t", "📝 Scratchup", ":lua require'scratchup'.open_popup()<CR>"),
+        dashboard.button("c", "💾 Configuration", ":e $MYVIMRC<CR>"),
+        dashboard.button("q", "❌ Quit Neovim", ":qa<CR>"),
+    }
+
     local handle = io.popen('fortune')
     local fortune = handle:read("*a")
     handle:close()
