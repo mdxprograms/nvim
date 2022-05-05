@@ -5,6 +5,8 @@ vim.g.mapleader = " "
 -- Map escape
 H.imap("jf", "<esc>")
 
+H.nmap('<silent> <Esc><Esc>', ':let @/=""<CR>')
+
 -- Base mappings
 H.nmap('<leader>pw', ':Rg <C-R>=expand("<cword>")<CR><CR>')
 H.nmap('<leader>phw', ':h <C-R>=expand("<cword>")<CR><CR>')
@@ -35,13 +37,17 @@ nmap <leader>gr <Plug>(coc-references)
 nmap <leader>rr <Plug>(coc-rename)
 nmap <leader>g[ <Plug>(coc-diagnostic-prev)
 nmap <leader>g] <Plug>(coc-diagnostic-next)
-nmap <silent> <leader>gp <Plug>(coc-diagnostic-prev-error)
 nmap <silent> <leader>gn <Plug>(coc-diagnostic-next-error)
 nmap <silent> <leader>ge <Plug>(coc-codeaction)
 nnoremap <leader>cr :CocRestart<CR>
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <Leader>pl :CocList project<CR>
 nnoremap <leader>e :CocCommand explorer<CR>
+]]
+
+-- clear search highlight on esc
+vim.cmd [[
+nnoremap <silent> <Esc><Esc> :let @/=""<CR>
 ]]
 
 -- Tabs
