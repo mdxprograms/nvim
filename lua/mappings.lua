@@ -45,11 +45,6 @@ nnoremap <Leader>pl :CocList project<CR>
 nnoremap <leader>e :CocCommand explorer<CR>
 ]]
 
--- clear search highlight on esc
-vim.cmd [[
-nnoremap <silent> <Esc><Esc> :let @/=""<CR>
-]]
-
 -- Tabs
 vim.cmd [[
 function SplitResizeTerminal()
