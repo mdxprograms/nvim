@@ -47,7 +47,8 @@ set_options(
     smartindent = true,
     splitbelow = true,
     splitright = true,
-    wrap = false
+    wrap = false,
+    shell = "/bin/sh"
   }
 )
 
