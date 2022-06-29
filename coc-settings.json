@@ -15,6 +15,7 @@
   "typescript.suggest.autoImports": true,
   "javascript.suggest.autoImports": true,
   "svelte.enable-ts-plugin": true,
+  "python.formatting.provider": "black",
   "languageserver": {
     "elmLS": {
       "command": "elm-language-server",
