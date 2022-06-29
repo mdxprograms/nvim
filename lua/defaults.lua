@@ -84,7 +84,6 @@ g.coc_global_extensions = {
   "coc-marketplace",
   "coc-prettier",
   "coc-project",
-  "coc-python",
   "coc-pyright",
   "coc-rls",
   "coc-rust-analyzer",

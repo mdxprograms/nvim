@@ -8,7 +8,8 @@
     "html",
     "json",
     "lua",
-    "elm"
+    "elm",
+    "python"
   ],
   "eslint.packageManager": "npm",
   "typescript.suggest.autoImports": true,
