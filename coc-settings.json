@@ -7,10 +7,32 @@
     "typescriptreact",
     "html",
     "json",
-    "lua"
+    "lua",
+    "elm",
+    "python"
   ],
   "eslint.packageManager": "npm",
   "typescript.suggest.autoImports": true,
   "javascript.suggest.autoImports": true,
-  "svelte.enable-ts-plugin": true
+  "svelte.enable-ts-plugin": true,
+  "python.formatting.provider": "black",
+  "languageserver": {
+    "elmLS": {
+      "command": "elm-language-server",
+      "filetypes": [
+        "elm"
+      ],
+      "rootPatterns": [
+        "elm.json"
+      ],
+      "trace.server": "verbose",
+      "initializationOptions": {
+        "elmPath": "elm",
+        "elmFormatPath": "elm-format",
+        "elmTestPath": "elm-test",
+        "disableElmLSDiagnostics": false,
+        "skipInstallPackageConfirmation": false
+      }
+    }
+  }
 }

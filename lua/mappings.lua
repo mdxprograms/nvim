@@ -48,13 +48,13 @@ nnoremap <leader>e :CocCommand explorer<CR>
 -- Tabs
 vim.cmd [[
 function SplitResizeTerminal()
-  exe "split | terminal"
+  exe "split | terminal fish"
   exe "resize 8"
 endfunction
 ]]
 
 H.nmap('<Leader>tn', ':tabnew<CR>')
-H.nmap('<Leader>tnt', ':tabnew | terminal<CR>')
+H.nmap('<Leader>tnt', ':tabnew | terminal fish<CR>')
 H.nmap('<Leader>tt', ':call SplitResizeTerminal()<CR>')
 H.nmap('<silent><Leader>td', ':tabclose<CR>')
 
