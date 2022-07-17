@@ -14,6 +14,7 @@ set_options(
     -- systematic
     backup = false,
     clipboard = "unnamedplus",
+    completeopt = "menu,menuone,noselect",
     encoding = "utf-8",
     fileencoding = "utf-8",
     fileencodings = "utf-8",

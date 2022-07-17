@@ -16,23 +16,19 @@ end
 
 return require("packer").startup(
     function()
-        use "wbthomason/packer.nvim"
         use "LnL7/vim-nix"
         use "SirVer/ultisnips"
         use "airblade/vim-gitgutter"
         use "alaviss/nim.nvim"
         use "azadkuh/vim-cmus"
-        use 'editorconfig/editorconfig-vim'
         use "fatih/vim-go"
         use "honza/vim-snippets"
         use "jiangmiao/auto-pairs"
         use "luochen1990/rainbow"
         use "mattn/emmet-vim"
         use "mbbill/undotree"
-        use 'MunifTanjim/nui.nvim'
         use "nathanaelkane/vim-indent-guides"
         use "nvim-lua/plenary.nvim"
-        use {"nvim-telescope/telescope.nvim", requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}}
         use "othree/html5.vim"
         use "pangloss/vim-javascript"
         use "preservim/nerdcommenter"
@@ -45,11 +41,22 @@ return require("packer").startup(
         use "tpope/vim-surround"
         use "vim-airline/vim-airline"
         use "vim-utils/vim-man"
-        use {"evanleck/vim-svelte", branch = "main"}
-        use {"dracula/vim", name = "vim-dracula", rev = "bfbc3cadbd142e74d3b92e63f1de8711261015a4", frozen = 1}
-        use {"neoclide/coc.nvim", branch = "release"}
-        use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
+        use "wbthomason/packer.nvim"
+        use 'MunifTanjim/nui.nvim'
+        use 'editorconfig/editorconfig-vim'
+        use 'hrsh7th/cmp-buffer'
+        use 'hrsh7th/cmp-cmdline'
+        use 'hrsh7th/cmp-nvim-lua'
+        use 'hrsh7th/cmp-nvim-lsp'
+        use 'hrsh7th/cmp-path'
+        use 'hrsh7th/nvim-cmp'
+        use 'neovim/nvim-lspconfig'
         use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+        use {"dracula/vim", name = "vim-dracula", rev = "bfbc3cadbd142e74d3b92e63f1de8711261015a4", frozen = 1}
+        use {"evanleck/vim-svelte", branch = "main"}
+        use {"neoclide/coc.nvim", branch = "release"}
+        use {"nvim-telescope/telescope.nvim", requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}}
+        use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
         use {
             'goolord/alpha-nvim',
             requires = { 'kyazdani42/nvim-web-devicons' },
