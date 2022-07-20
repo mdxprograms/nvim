@@ -46,10 +46,11 @@ return require("packer").startup(
         use 'editorconfig/editorconfig-vim'
         use 'hrsh7th/cmp-buffer'
         use 'hrsh7th/cmp-cmdline'
-        use 'hrsh7th/cmp-nvim-lua'
         use 'hrsh7th/cmp-nvim-lsp'
+        use 'hrsh7th/cmp-nvim-lua'
         use 'hrsh7th/cmp-path'
         use 'hrsh7th/nvim-cmp'
+        use 'lepture/vim-jinja'
         use 'neovim/nvim-lspconfig'
         use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
         use {"dracula/vim", name = "vim-dracula", rev = "bfbc3cadbd142e74d3b92e63f1de8711261015a4", frozen = 1}
