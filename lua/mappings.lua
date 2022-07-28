@@ -68,3 +68,6 @@ H.nmap('<Leader>gs', ':Neogit<CR>')
 -- Scratchup
 H.nmap('<Leader>op', ':lua require("scratchup").open_popup()<cr>')
 H.nmap('<Leader>cp', ':lua require("scratchup").close_popup()<cr>')
+
+-- Clear incremental search
+H.nmap('<silent><Esc><Esc>', ':let @/=""<CR>')
