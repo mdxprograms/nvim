@@ -50,8 +50,6 @@ vim.cmd [[
 
     au BufNewFile,BufRead *.gohtml set syntax=gohtmltmpl
   endif
-
-  nnoremap <CR> :noh<CR><CR>
 ]]
 
 -- ignore indentline on alpha startup

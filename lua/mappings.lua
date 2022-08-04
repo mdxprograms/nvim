@@ -5,8 +5,6 @@ vim.g.mapleader = " "
 -- Map escape
 H.imap("jf", "<esc>")
 
-H.nmap('<silent> <Esc><Esc>', ':let @/=""<CR>')
-
 -- Base mappings
 H.nmap('<leader>pw', ':Rg <C-R>=expand("<cword>")<CR><CR>')
 H.nmap('<leader>phw', ':h <C-R>=expand("<cword>")<CR><CR>')
@@ -20,6 +18,8 @@ H.nmap('<Leader>-', ':resize -5<CR>')
 H.nmap('<Leader>rp', ':resize 100<CR>')
 H.nmap('<Leader><Leader>', ':e ~/.config/nvim/init.lua<CR>')
 H.nmap('<Leader>rs', ':resize<space>')
+
+H.nmap('<CR>', ':noh<CR><CR>')
 
 -- File navigation mappings
 H.nmap('<Leader>fg', '<cmd>Telescope live_grep<cr>')
@@ -68,6 +68,3 @@ H.nmap('<Leader>gs', ':Neogit<CR>')
 -- Scratchup
 H.nmap('<Leader>op', ':lua require("scratchup").open_popup()<cr>')
 H.nmap('<Leader>cp', ':lua require("scratchup").close_popup()<cr>')
-
--- Clear incremental search
-H.nmap('<silent><Esc><Esc>', ':let @/=""<CR>')
