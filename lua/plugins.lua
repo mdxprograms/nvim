@@ -31,7 +31,15 @@ return require('packer').startup(
         use 'hrsh7th/cmp-nvim-lsp'
         use 'hrsh7th/cmp-nvim-lua'
         use 'hrsh7th/cmp-path'
-        use 'hrsh7th/nvim-cmp'
+        use {"hrsh7th/nvim-cmp",
+            requires = {
+                "quangnguyen30192/cmp-nvim-ultisnips",
+                config = function()
+                    -- optional call to setup (see customization section)
+                    require("cmp_nvim_ultisnips").setup{}
+                end,
+                requires = { "nvim-treesitter/nvim-treesitter" },
+        }}
         use 'jiangmiao/auto-pairs'
         use 'lepture/vim-jinja'
         use 'luochen1990/rainbow'
@@ -43,6 +51,7 @@ return require('packer').startup(
         use 'othree/html5.vim'
         use 'pangloss/vim-javascript'
         use 'preservim/nerdcommenter'
+        use 'quangnguyen30192/cmp-nvim-ultisnips'
         use 'radenling/vim-dispatch-neovim'
         use 'rhysd/vim-grammarous'
         use 'ryanoasis/vim-devicons'
