@@ -66,9 +66,6 @@ g.indent_guides_enable_on_vim_startup = true
 g.indent_guides_start_level = 2
 g.indent_guides_guide_size = 1
 
--- ultisnips
-g.UltiSnipsExpandTrigger = "<tab>"
-
 -- Javascript
 g.svelte_preprocessors = {"typescript"}
 
@@ -78,7 +75,6 @@ g.coc_global_extensions = {
   "coc-cssmodules",
   "coc-emmet",
   "coc-eslint",
-  "coc-explorer",
   "coc-go",
   "coc-html",
   "coc-json",
@@ -93,7 +89,6 @@ g.coc_global_extensions = {
   "coc-svelte",
   "coc-tailwindcss",
   "coc-tsserver",
-  "coc-ultisnips",
   "coc-yaml"
 }
 
