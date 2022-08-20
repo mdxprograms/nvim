@@ -1,12 +1,12 @@
 -- defaults
 local g = vim.g
 local HOME = os.getenv("HOME")
-local set_options = require('helpers').set_options
+local set_options = require('user.helpers').set_options
 
 vim.cmd("filetype plugin indent on")
 vim.cmd("syntax enable")
 
-require('commands')
+require('user.commands')
 
 -- default settings
 set_options(

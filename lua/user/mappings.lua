@@ -1,4 +1,4 @@
-local H = require('helpers')
+local H = require('user.helpers')
 
 vim.g.mapleader = " "
 
