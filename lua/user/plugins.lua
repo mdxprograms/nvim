@@ -1,12 +1,5 @@
 -- plugins
 
-local fn = vim.fn
-local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-    packer_bootstrap =
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-end
-
 vim.cmd [[
 augroup packer_user_config
   autocmd!
@@ -14,39 +7,44 @@ augroup packer_user_config
 augroup end
 ]]
 
+local fn = vim.fn
+local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+    packer_bootstrap =
+    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+end
+
+
 return require('packer').startup(
     function()
+        -- completion + lsp
+        use {'onsails/lspkind-nvim'}
+        use {"hrsh7th/nvim-cmp", config = [[require('user.completion')]]}
+        use { 'hrsh7th/cmp-buffer', after = "nvim-cmp" }
+        use { 'hrsh7th/cmp-path', after = "nvim-cmp" }
+        use { 'hrsh7th/cmp-nvim-lsp', after = "nvim-cmp" }
+        use { 'hrsh7th/cmp-omni', after = "nvim-cmp" }
+        use {"quangnguyen30192/cmp-nvim-ultisnips", after = {'nvim-cmp', 'ultisnips'}}
+        use { 'neovim/nvim-lspconfig', after = "cmp-nvim-lsp" }
+        use 'hrsh7th/cmp-cmdline'
+        use 'hrsh7th/cmp-nvim-lua'
+        use 'SirVer/ultisnips'
+        use 'honza/vim-snippets'
+
+        -- other
         use 'LnL7/vim-nix'
         use 'MunifTanjim/nui.nvim'
-        use 'SirVer/ultisnips'
         use 'airblade/vim-gitgutter'
-        use 'alaviss/nim.nvim'
         use 'azadkuh/vim-cmus'
         use 'digitaltoad/vim-pug'
         use 'editorconfig/editorconfig-vim'
         use 'fatih/vim-go'
-        use 'honza/vim-snippets'
-        use 'hrsh7th/cmp-buffer'
-        use 'hrsh7th/cmp-cmdline'
-        use 'hrsh7th/cmp-nvim-lsp'
-        use 'hrsh7th/cmp-nvim-lua'
-        use 'hrsh7th/cmp-path'
-        use {"hrsh7th/nvim-cmp",
-            requires = {
-                "quangnguyen30192/cmp-nvim-ultisnips",
-                config = function()
-                    -- optional call to setup (see customization section)
-                    require("cmp_nvim_ultisnips").setup{}
-                end,
-                requires = { "nvim-treesitter/nvim-treesitter" },
-        }}
         use 'jiangmiao/auto-pairs'
         use 'lepture/vim-jinja'
         use 'luochen1990/rainbow'
         use 'mattn/emmet-vim'
         use 'mbbill/undotree'
         use 'nathanaelkane/vim-indent-guides'
-        use 'neovim/nvim-lspconfig'
         use 'nvim-lua/plenary.nvim'
         use 'othree/html5.vim'
         use 'pangloss/vim-javascript'
