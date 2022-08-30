@@ -19,12 +19,25 @@ return require('packer').startup(
     function()
         -- completion + lsp
         use {'onsails/lspkind-nvim'}
-        use {"hrsh7th/nvim-cmp", config = [[require('user.completion')]]}
+        use {
+            "hrsh7th/nvim-cmp",
+            config = function()
+                require('user.completion')
+            end,
+        }
         use { 'hrsh7th/cmp-buffer', after = "nvim-cmp" }
         use { 'hrsh7th/cmp-path', after = "nvim-cmp" }
         use { 'hrsh7th/cmp-nvim-lsp', after = "nvim-cmp" }
         use { 'hrsh7th/cmp-omni', after = "nvim-cmp" }
         use {"quangnguyen30192/cmp-nvim-ultisnips", after = {'nvim-cmp', 'ultisnips'}}
+        use { 'saadparwaiz1/cmp_luasnip' }
+        use {
+            'L3MON4D3/LuaSnip',
+            after = 'nvim-cmp',
+            config = function()
+                require'user.snippets'
+            end,
+        }
         use { 'neovim/nvim-lspconfig', after = "cmp-nvim-lsp" }
         use 'hrsh7th/cmp-cmdline'
         use 'hrsh7th/cmp-nvim-lua'
