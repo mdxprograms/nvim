@@ -66,5 +66,9 @@ H.nmap('<Leader>bd', ':bd!<CR>')
 H.nmap('<Leader>gs', ':Neogit<CR>')
 
 -- Scratchup
-H.nmap('<Leader>op', ':lua require("scratchup").open_popup()<cr>')
-H.nmap('<Leader>cp', ':lua require("scratchup").close_popup()<cr>')
+H.nmap('<Leader>op', ':lua require("user.scratchup").open_popup()<cr>')
+H.nmap('<Leader>cp', ':lua require("user.scratchup").close_popup()<cr>')
+
+-- GoogleSearch
+H.nmap('<Leader>mgs', ':lua require("user.google_search").open()<cr>')
+
