@@ -1,5 +1,6 @@
 local Input = require("nui.input")
 local event = require("nui.utils.autocmd").event
+local is_macos = require("user.helpers").is_macos
 
 local GoogleSearch = {}
 
@@ -25,7 +26,11 @@ GoogleSearch.input = Input({
             print("closed")
         end,
         on_submit = function(value)
-            os.execute('open https://google.com/search?q="'.. value ..'"')
+            if is_macos() then
+                os.execute('open https://google.com/search?q="'.. value ..'"')
+            else
+                vim.cmd('exec "!xdg-open https://google.com/search?q=\'' .. value .. '\'"')
+            end
         end,
     })
 

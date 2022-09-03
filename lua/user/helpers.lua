@@ -28,4 +28,8 @@ M.set_options = function(options)
   end
 end
 
+M.is_macos = function()
+    return vim.loop.os_uname().sysname == "Darwin"
+end
+
 return M

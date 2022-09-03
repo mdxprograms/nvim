@@ -1,0 +1,2 @@
+Reddit https://reddit.com
+MDN https://developer.mozilla.org
