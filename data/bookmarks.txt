@@ -2,3 +2,4 @@ Reddit https://reddit.com
 MDN https://developer.mozilla.org
 digitalocean https://www.digitalocean.com
 tailwind https://tailwindcss.com
+KindleCloudReader https://read.amazon.com/kindle-library
