@@ -1,2 +1,4 @@
 Reddit https://reddit.com
 MDN https://developer.mozilla.org
+digitalocean https://www.digitalocean.com
+tailwind https://tailwindcss.com
