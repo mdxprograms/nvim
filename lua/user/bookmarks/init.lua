@@ -1,7 +1,7 @@
 local Menu = require("nui.menu")
 local is_macos = require("user.helpers").is_macos
 local HOME = os.getenv("HOME")
-local bookmark_input = require("lua.user.bookmarks.fields")
+local bookmark_input = require("user.bookmarks.fields")
 local utils = require("user.bookmarks.utils")
 
 local bookmarks_file = HOME .. "/.config/nvim/data/bookmarks.txt"
