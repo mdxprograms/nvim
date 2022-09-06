@@ -62,7 +62,7 @@ bookmarks_menu = Menu({
 
             -- mac open
             if is_macos() then
-                os.execute('silent! open "'.. item.link ..'"')
+                os.execute('open "'.. item.link ..'"')
             else
                 vim.cmd('silent! exec "!xdg-open \'' .. item.link .. '\'"')
             end
