@@ -73,4 +73,4 @@ H.nmap('<Leader>cp', ':lua require("user.scratchup").close_popup()<cr>')
 H.nmap('<Leader>mgs', ':lua require("user.google_search").open()<cr>')
 
 -- Bookmarks
-H.nmap('<Leader>mb', ':lua require("user.bookmarks.init"):mount()<cr>')
+H.nmap('<Leader>mb', ':lua require("user.bookmarks.init"):init()<cr>')

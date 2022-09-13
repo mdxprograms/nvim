@@ -42,7 +42,7 @@ function M.setup()
     }
     dashboard.section.buttons.val = {
         dashboard.button("t", "📝 Scratchup", ":lua require'user.scratchup'.open_popup()<CR>"),
-        dashboard.button("b", "📝 Bookmarks", ":lua require'user.bookmarks.init':mount()<cr>"),
+        dashboard.button("b", "📝 Bookmarks", ":lua require'user.bookmarks.init':init()<cr>"),
         dashboard.button("c", "💾 Configuration", ":e $MYVIMRC<CR>"),
         dashboard.button("q", "❌ Quit Neovim", ":qa<CR>"),
     }

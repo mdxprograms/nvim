@@ -12,6 +12,23 @@ M.read_file = function(file_path)
     return lines
 end
 
+M.delete_bookmark = function(file_path, match)
+    local updated_lines = {}
+
+    for _,l in pairs(M.read_file(file_path)) do
+        if (not string.find(l, match)) then
+            table.insert(updated_lines, l)
+        end
+    end
+
+    local file = io.open(file_path, "w")
+
+    for _,l in ipairs(updated_lines) do
+        file:write(l, "\n")
+    end
+
+    file:close()
+end
 
 M.split_string = function(s, delimiter)
     local result = {};
