@@ -22,5 +22,5 @@ wk.register({
             s = "Save file",
             g = "Global search",
             b = "Recent Files"
-        }
+        },
     }, { prefix = "<leader>", nowait = true })

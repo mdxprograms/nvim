@@ -27,10 +27,10 @@ H.nmap('<Leader>ff', '<cmd>Telescope find_files<cr>')
 H.nmap('<Leader>fb', '<cmd>Telescope buffers<cr>')
 H.nmap('<Leader>fs', ':w<CR>')
 H.nmap('<Leader>s', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
+H.nmap('<Leader>e', ':NvimTreeToggle<CR>')
 
 -- CoC mappings
 vim.cmd [[
-inoremap <silent><expr> <C-space> coc#refresh()
 nmap <silent> <leader>gd :call CocAction("jumpDefinition", "split")<CR>
 nmap <leader>gi <Plug>(coc-implementation)
 nmap <leader>gr <Plug>(coc-references)
@@ -42,7 +42,6 @@ nmap <silent> <leader>ge <Plug>(coc-codeaction)
 nnoremap <leader>cr :CocRestart<CR>
 nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 nnoremap <Leader>pl :CocList project<CR>
-nnoremap <leader>e :CocCommand explorer<CR>
 ]]
 
 -- Tabs

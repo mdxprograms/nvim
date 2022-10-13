@@ -6,8 +6,6 @@ local set_options = require('user.helpers').set_options
 vim.cmd("filetype plugin indent on")
 vim.cmd("syntax enable")
 
-require('user.commands')
-
 -- default settings
 set_options(
   {
