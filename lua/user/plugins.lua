@@ -50,6 +50,7 @@ return require('packer').startup(
         use 'pangloss/vim-javascript'
         use 'preservim/nerdcommenter'
         use 'radenling/vim-dispatch-neovim'
+        use 'rcarriga/nvim-notify'
         use 'rhysd/vim-grammarous'
         use 'ryanoasis/vim-devicons'
         use 'sheerun/vim-polyglot'
