@@ -10,8 +10,7 @@ augroup end
 local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-    packer_bootstrap =
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
 
@@ -47,6 +46,7 @@ return require('packer').startup(
         use 'nathanaelkane/vim-indent-guides'
         use 'nvim-lua/plenary.nvim'
         use 'othree/html5.vim'
+        use 'lumiliet/vim-twig'
         use 'pangloss/vim-javascript'
         use 'preservim/nerdcommenter'
         use 'radenling/vim-dispatch-neovim'
