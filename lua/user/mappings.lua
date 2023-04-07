@@ -24,7 +24,7 @@ H.nmap('<CR>', ':noh<CR><CR>')
 -- File navigation mappings
 H.nmap('<Leader>fg', '<cmd>Telescope live_grep<cr>')
 H.nmap('<Leader>ff', '<cmd>Telescope find_files<cr>')
-H.nmap('<Leader>fb', '<cmd>Telescope buffers<cr>')
+H.nmap('<Leader>fb', '<cmd>Telescope file_browser<cr>')
 H.nmap('<Leader>fs', ':w<CR>')
 H.nmap('<Leader>s', '<cmd>Telescope current_buffer_fuzzy_find<cr>')
 H.nmap('<Leader>e', ':NvimTreeToggle<CR>')

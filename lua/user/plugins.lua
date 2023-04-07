@@ -10,20 +10,21 @@ augroup end
 local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 if fn.empty(fn.glob(install_path)) > 0 then
-    packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    packer_bootstrap = fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim',
+        install_path })
 end
 
 
 return require('packer').startup(
     function()
         -- completion + lsp
-        use {'onsails/lspkind-nvim'}
-        use {"hrsh7th/nvim-cmp", config = [[require('user.completion')]]}
+        use { 'onsails/lspkind-nvim' }
+        use { "hrsh7th/nvim-cmp", config = [[require('user.completion')]] }
         use { 'hrsh7th/cmp-buffer', after = "nvim-cmp" }
         use { 'hrsh7th/cmp-path', after = "nvim-cmp" }
         use { 'hrsh7th/cmp-nvim-lsp', after = "nvim-cmp" }
         use { 'hrsh7th/cmp-omni', after = "nvim-cmp" }
-        use {"quangnguyen30192/cmp-nvim-ultisnips", after = {'nvim-cmp', 'ultisnips'}}
+        use { "quangnguyen30192/cmp-nvim-ultisnips", after = { 'nvim-cmp', 'ultisnips' } }
         use { 'neovim/nvim-lspconfig', after = "cmp-nvim-lsp" }
         use 'hrsh7th/cmp-cmdline'
         use 'hrsh7th/cmp-nvim-lua'
@@ -45,9 +46,7 @@ return require('packer').startup(
         use 'mbbill/undotree'
         use 'nathanaelkane/vim-indent-guides'
         use 'nvim-lua/plenary.nvim'
-        use 'othree/html5.vim'
         use 'lumiliet/vim-twig'
-        use 'pangloss/vim-javascript'
         use 'preservim/nerdcommenter'
         use 'radenling/vim-dispatch-neovim'
         use 'rcarriga/nvim-notify'
@@ -63,7 +62,7 @@ return require('packer').startup(
         use {
             "folke/which-key.nvim",
             config = function()
-                require'user.whichkey_config'
+                require 'user.whichkey_config'
             end
         }
         use {
@@ -72,25 +71,31 @@ return require('packer').startup(
                 'kyazdani42/nvim-web-devicons', -- optional, for file icons
             },
             config = function()
-                require'user.nvim-tree-config'
+                require 'user.nvim-tree-config'
             end,
             tag = 'nightly' -- optional, updated every week. (see issue #1193)
         }
         use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
-        use {'dracula/vim', name = 'vim-dracula', rev = 'bfbc3cadbd142e74d3b92e63f1de8711261015a4', frozen = 1}
-        use {'evanleck/vim-svelte', branch = 'main'}
-        use {'neoclide/coc.nvim', branch = 'release'}
-        use {'nvim-telescope/telescope.nvim', requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}}
-        use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+        use { 'dracula/vim', name = 'vim-dracula', rev = 'bfbc3cadbd142e74d3b92e63f1de8711261015a4', frozen = 1 }
+        use { 'HerringtonDarkholme/yats.vim' }
+        use { 'neoclide/coc.nvim', branch = 'release' }
+        use { 'evanleck/vim-svelte', branch = 'main' }
+        use { 'codechips/coc-svelte', run = 'npm install' }
+        use { 'nvim-telescope/telescope.nvim', requires = { { 'nvim-lua/popup.nvim' }, { 'nvim-lua/plenary.nvim' } } }
+        use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
         use {
             'goolord/alpha-nvim',
             requires = { 'kyazdani42/nvim-web-devicons' },
-            config = function ()
-                require'user.alpha_nvim_config'.setup()
+            config = function()
+                require 'user.alpha_nvim_config'.setup()
             end
+        }
+        use {
+            "nvim-telescope/telescope-file-browser.nvim",
+            requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
         }
         if packer_bootstrap then
             require('packer').sync()
         end
     end
-    )
+)
