@@ -87,7 +87,8 @@ g.coc_global_extensions = {
     "coc-svelte",
     "coc-tailwindcss",
     "coc-tsserver",
-    "coc-yaml"
+    "coc-yaml",
+    "@yaegassy/coc-volar"
 }
 
 require("telescope").load_extension "file_browser"
